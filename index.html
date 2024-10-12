@@ -3,47 +3,116 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="view" content="width=device-width, initial-scale=1.0">
-    <title>Website Bisnis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Bisnis - Kedai Murmer</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <div class="header" id="home">
+    <header id="home">
         <h1>Kedai Murmer</h1>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#content">About</a></li>
-            <li><a href="#footer">Contact</a></li>
-        </ul>
-    </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#content">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="content" id="content">
-        <img src="gambar\kedai.jpg" alt="Logo Bisnis" widht="" height="100">
-        <h2>Deskripsi Singkat</h2>
-        <p>Kedai Murmer menyajikan berbagai hidangan lezat dan minuman segar yang dibuat dengan bahan-bahan pilihan.
-            Dengan suasana yang nyaman dan pelayanan yang ramah, kami berkomitmen untuk memberikan pengalaman kuliner
-            yang memuaskan bagi setiap pelanggan. </p>
+    <main id="content">
+        <section>
+            <img src="gambar/kedai.png" width="200" height="190">
+            <h2>Deskripsi Singkat</h2>
+            <p>Kedai Murmer menyajikan berbagai hidangan lezat dan minuman segar yang dibuat dengan bahan-bahan pilihan.
+                Dengan suasana yang nyaman dan pelayanan yang ramah, kami berkomitmen untuk memberikan pengalaman kuliner
+                yang memuaskan bagi setiap pelanggan.</p>
+        </section>
 
-        <h3>Layanan Kami</h3>
-        <ul>
-            <li><strong>Layanan Pesan Antar:</strong> Kami menyediakan layanan pesan antar untuk memudahkan Anda
-                menikmati makanan favorit tanpa harus keluar rumah.</li>
-            <li><strong>Layanan Takeaway (Bawa Pulang):</strong> Bagi Anda yang sedang terburu-buru, kami menyediakan
-                layanan takeaway. Pesan makanan atau minuman favorit Anda dan bawa pulang dengan cepat dan praktis.</li>
-            <li><strong>Layanan Makan di Tempat:</strong> Nikmati hidangan lezat kami langsung di kedai dengan suasana
-                yang nyaman dan ramah, cocok untuk bersantai bersama teman dan keluarga.</li>
-        </ul>
-    </div>
-    </div>
+        <section>
+            <h3>Produk Kami</h3>
+            <div class="product-card-container">
+                <p class="sempol"><div class="product-card"></p>
+                    <img src="gambar/sempolang.jpg" alt="Produk 1" width="200" height="190">
+                    <h4>Sempolan</h4>
+                    <p>Sempolan yang renyah dengan cita rasa gurih.</p>
+                </div>
+                <div class="product-card">
+                    <img src="gambar/cireng.jpg" alt="Produk 2" width="20" height="190">
+                    <h4>Cireng Isi</h4>
+                    <p>Cireng dengan isian daging ayam yang lezat.</p>
+                </div>
+                <div class="product-card">
+                    <img src="gambar/pop ice.jpg" alt="Produk 3" width="200" height="190">
+                    <h4>Pop Ice</h4>
+                    <p>Minuman segar dengan berbagai rasa pilihan.</p>
+                </div>
+            </div>
+        </section>
 
-    <div class="footer" id="footer">
-        <p>Hubungi Kami: </p>
-        <p><a href="mailto:idrismarzuki1911@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a></p>
-        <p><a href="https://wa.me/+6281388949264"><i class="fa-solid fa-phone"></i> Telepone</a></p>
-        <p><a href="https://maps.app.goo.gl/s9qyiy57L6j7Zgbc8"><i class="fa-solid fa-map"></i> Alamat</a></p>
-    </div>
+        <section>
+            <h3>Daftar Menu Makanan & Minuman</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Menu Makanan & Minuman</th>
+                        <th>Deskripsi</th>
+                        <th>Harga</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sempolan</td>
+                        <td>Sempolan adalah camilan yang terbuat dari adonan daging ayam dan tepung tapioka.</td>
+                        <td>Rp. 5.000</td>
+                    </tr>
+                    <tr>
+                        <td>Cireng Isi</td>
+                        <td>Cireng isi dengan daging ayam yang renyah.</td>
+                        <td>Rp. 5.000</td>
+                    </tr>
+                    <tr>
+                        <td>Cilok Ayam</td>
+                        <td>Cilok ayam dengan tekstur kenyal dan rasa gurih.</td>
+                        <td>Rp. 5.000</td>
+                    </tr>
+                    <tr>
+                        <td>Es Teh</td>
+                        <td>Minuman es teh yang menyegarkan.</td>
+                        <td>Rp. 3.000</td>
+                    </tr>
+                    <tr>
+                        <td>Pop Ice</td>
+                        <td>Pop Ice dengan berbagai rasa buah.</td>
+                        <td>Rp. 3.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
 
+    <section id="contact">
+        <h3>Kontak Kami</h3>
+        <form class="contact-form">
+            <p class="satu"><label for="nama">Nama:</label>
+            <input id="nama" type="text" placeholder="Nama Anda" required></p>
+
+            <p class="dua"><label for="email">Email:</label>
+            <input id="email" type="email" placeholder="Email Anda" required></p>
+
+            <p class="tiga"><label for="pesan">Pesan:</label>
+            <textarea id="pesan" cols="20" rows="4" placeholder="Pesan Anda"></textarea></p>
+
+            <button type="submit">Kirim</button>
+        </form>
+    </section>
+
+    <footer id="footer">
+        <p>Hubungi Kami:</p>
+        <p><a href="mailto:idrismarzuki1911@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a> <a href="https://wa.me/6281388949264"><i class="fa-solid fa-phone"></i> Telepon</a></p>
+        <p><a href="https://www.instagram.com/kedai_murmer23"><i class="fa-brands fa-instagram"></i> Instagram</a> <a href="https://maps.app.goo.gl/s9qyiy57L6j7Zgbc8"><i class="fa-solid fa-map"></i> Alamat</a></p>
+    </footer>
 </body>
 
 </html>
