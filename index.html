@@ -5,110 +5,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Bisnis - Kedai Murmer</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <header id="home">
-        <h1>Kedai Murmer</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#content">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header>
+        <div id="home"class="navbar">
+            <h1>Kedai Murmer</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main id="content">
-        <section>
-            <img src="gambar/kedai.png" width="200" height="190">
-            <h2>Deskripsi Singkat</h2>
+    <section id="about" class="hero">
+        <div class="hero-content">
+            <h2>Selamat Datang di Kedai Murmer</h2>
             <p>Kedai Murmer menyajikan berbagai hidangan lezat dan minuman segar yang dibuat dengan bahan-bahan pilihan.
                 Dengan suasana yang nyaman dan pelayanan yang ramah, kami berkomitmen untuk memberikan pengalaman kuliner
                 yang memuaskan bagi setiap pelanggan.</p>
-        </section>
+            <button>Selengkapnya</button>
+        </div>
+        <div class="hero-image">
+            <img src="gambar/kedai.png" width="200" height="190">
+        </div>
+    </section>
 
-        <section>
-            <h3>Produk Kami</h3>
-            <div class="product-card-container">
-                <p class="sempol"><div class="product-card"></p>
-                    <img src="gambar/sempolang.jpg" alt="Produk 1" width="200" height="190">
-                    <h4>Sempolan</h4>
-                    <p>Sempolan yang renyah dengan cita rasa gurih.</p>
-                </div>
-                <div class="product-card">
-                    <img src="gambar/cireng.jpg" alt="Produk 2" width="20" height="190">
-                    <h4>Cireng Isi</h4>
-                    <p>Cireng dengan isian daging ayam yang lezat.</p>
-                </div>
-                <div class="product-card">
-                    <img src="gambar/pop ice.jpg" alt="Produk 3" width="200" height="190">
-                    <h4>Pop Ice</h4>
-                    <p>Minuman segar dengan berbagai rasa pilihan.</p>
-                </div>
+    <section class="layanan">
+        <h3>LAYANAN KAMI</h3>
+        <p>Di Kedai Murmer, kami punya layanan lengkap untuk memudahkan Anda menikmati setiap sajian! Mau dine-in, takeaway, atau delivery, kami siap melayani Anda dengan cepat dan ramah.</p>
+        <table>
+            <tr>
+                <th>Layanan Dine-In</th>
+                <th>Layanan Takeaway</th>
+                <th>Layanan Pesan Antar</th>
+            </tr>
+            <tr>
+                <td>Nikmati suasana nyaman dan layanan cepat untuk pengalaman makan dan minum langsung di kedai kami</td>
+                <td>Pesan dan bawa pulang hidangan favorit Anda agar bisa dinikmati di mana saja.</td>
+                <td>Kami antar langsung ke lokasi Anda tanpa harus keluar rumah.</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="produk">
+        <h3>PRODUK KAMI</h3>
+        <p>Setiap menu kami diracik dengan bahan berkualitas untuk memberikan pengalaman makan dan minum yang memuaskan. Rasakan sensasi kelezatan tanpa harus merogoh kocek dalam!</p>
+        <div class="produk-list">
+            <div class="produk-item">
+                <img src="gambar/sempolang.jpg" alt="Product 1" width="200" height="190" >
+                <h4>Sempolan</h4>
+                <p>Sempolan yang renyah dengan cita rasa gurih.</p>
             </div>
-        </section>
-
-        <section>
-            <h3>Daftar Menu Makanan & Minuman</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Menu Makanan & Minuman</th>
-                        <th>Deskripsi</th>
-                        <th>Harga</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Sempolan</td>
-                        <td>Sempolan adalah camilan yang terbuat dari adonan daging ayam dan tepung tapioka.</td>
-                        <td>Rp. 5.000</td>
-                    </tr>
-                    <tr>
-                        <td>Cireng Isi</td>
-                        <td>Cireng isi dengan daging ayam yang renyah.</td>
-                        <td>Rp. 5.000</td>
-                    </tr>
-                    <tr>
-                        <td>Cilok Ayam</td>
-                        <td>Cilok ayam dengan tekstur kenyal dan rasa gurih.</td>
-                        <td>Rp. 5.000</td>
-                    </tr>
-                    <tr>
-                        <td>Es Teh</td>
-                        <td>Minuman es teh yang menyegarkan.</td>
-                        <td>Rp. 3.000</td>
-                    </tr>
-                    <tr>
-                        <td>Pop Ice</td>
-                        <td>Pop Ice dengan berbagai rasa buah.</td>
-                        <td>Rp. 3.000</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </main>
-
-    <section id="contact">
+            <div class="produk-item">
+                <img src="gambar/cireng.jpg" alt="Product 2" width="20" height="190">
+                <h4>Cireng Isi</h4>
+                <p>Cireng dengan isian daging ayam yang lezat.</p>
+            </div>
+            <div class="produk-item">
+                <img src="gambar\cilok.jpg" alt="Product 3" width="200" height="190">
+                <h4>Cilok Bumbu kacang</h4>
+                <p>Cilok kenyal dengan bumbu kacang gurih dan manis yang lezat.</p>
+            </div>
+            <div class="produk-item">
+                <img src="gambar\bakso ayam.jpg" alt="Product 3" width="200" height="190">
+                <h4> Bakso Ayam</h4>
+                <p>Bakso Ayam lembut dan gurih, disajikan dengan kuah kaldu hangat yang kaya rasa.</p>
+            </div>
+            <div class="produk-item">
+                <img src="gambar\es teh.jpg" alt="Product 3" width="200" height="190">
+                <h4>Es Teh</h4>
+                <p>Es Teh segar dengan rasa manis yang pas, sempurna untuk menghilangkan dahaga.</p>
+            </div>
+            <div class="produk-item">
+                <img src="gambar/pop ice.jpg" alt="Product 3" width="200" height="190">
+                <h4>Pop Ice</h4>
+                <p>Minuman segar dengan berbagai rasa pilihan.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
         <h3>Kontak Kami</h3>
         <form class="contact-form">
-            <p class="satu"><label for="nama">Nama:</label>
+            <p><label for="nama">Nama:</label>
             <input id="nama" type="text" placeholder="Nama Anda" required></p>
 
-            <p class="dua"><label for="email">Email:</label>
+            <p><label for="email">Email:</label>
             <input id="email" type="email" placeholder="Email Anda" required></p>
 
-            <p class="tiga"><label for="pesan">Pesan:</label>
+            <p><label for="pesan">Pesan:</label>
             <textarea id="pesan" cols="20" rows="4" placeholder="Pesan Anda"></textarea></p>
 
-            <button type="submit">Kirim</button>
+            <button class="pop" type="submit">Kirim</button>
         </form>
     </section>
 
-    <footer id="footer">
+    <footer class="footer">
         <p>Hubungi Kami:</p>
         <p><a href="mailto:idrismarzuki1911@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a> <a href="https://wa.me/6281388949264"><i class="fa-solid fa-phone"></i> Telepon</a></p>
         <p><a href="https://www.instagram.com/kedai_murmer23"><i class="fa-brands fa-instagram"></i> Instagram</a> <a href="https://maps.app.goo.gl/s9qyiy57L6j7Zgbc8"><i class="fa-solid fa-map"></i> Alamat</a></p>
