@@ -11,10 +11,11 @@
 
 <body>
     <header>
-        <div id="home"class="navbar">
+        <div id="home" class="navbar">
             <h1>Kedai Murmer</h1>
+            <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
             <nav>
-                <ul>
+                <ul id="nav-menu">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -99,7 +100,7 @@
             <input id="email" type="email" placeholder="Email Anda" required></p>
 
             <p><label for="pesan">Pesan:</label>
-            <textarea id="pesan" cols="20" rows="4" placeholder="Pesan Anda"></textarea></p>
+            <textarea id="pesan" type="pesan" placeholder="Pesan Anda"></textarea></p>
 
             <button class="pop" type="submit">Kirim</button>
         </form>
@@ -110,6 +111,7 @@
         <p><a href="mailto:idrismarzuki1911@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a> <a href="https://wa.me/6281388949264"><i class="fa-solid fa-phone"></i> Telepon</a></p>
         <p><a href="https://www.instagram.com/kedai_murmer23"><i class="fa-brands fa-instagram"></i> Instagram</a> <a href="https://maps.app.goo.gl/s9qyiy57L6j7Zgbc8"><i class="fa-solid fa-map"></i> Alamat</a></p>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
