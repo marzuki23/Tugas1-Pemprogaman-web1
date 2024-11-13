@@ -1,6 +1,30 @@
+/* Untuk mengimpor font "Roboto" dari Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Mengatur font global menjadi "Roboto" dengan cadangan sans-serif */
 * {
-    font-family: "Roboto", sans-serif;;
+    font-family: "Roboto", sans-serif;
+    ;
+}
+
+/* Mengatur tampilan navbar dengan latar belakang hijau, teks putih, padding, dan tata letak 
+fleksibel agar judul dan menu berada di posisi yang sesuai */
+.navbar {
+    background-color: #2e7d32;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Menyetel margin dan padding semua elemen ke nol serta menerapkan kotak box-sizing agar batas
+tidak mengganggu ukuran elemen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 .navbar {
@@ -12,17 +36,107 @@
     align-items: center;
 }
 
-.navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
+/* Mengatur ukuran font untuk judul di navbar */
+.navbar h1 {
+    font-size: 1.5rem;
 }
 
-.navbar a {
+/* Menghilangkan penanda list dan membuat menu horizontal */
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+/* Memberikan jarak antar-item di menu */
+.menu li {
+    margin: 0 15px;
+}
+
+/* Mengatur warna dan menghilangkan garis bawah dari tautan di menu */
+.menu li a {
     color: white;
     text-decoration: none;
 }
 
+/* Toggle button hanya muncul di layar kecil */
+.toggle-button {
+    display: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* Responsive untuk layar kecil */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Sembunyikan menu secara default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #2e7d32;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu.active {
+        display: flex; /* Tampilkan menu saat tombol ditekan */
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    .toggle-button {
+        display: block; /* Tampilkan tombol pada layar kecil */
+    }
+}
+ 
+  .menu li {
+    padding-right: 0px;
+    position: relative;
+  }
+  
+  .menu li a {
+    padding: 10px;
+    color: var(--textprimary);
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .menu li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    left: 0;
+    background: var(--secondarycolor);
+    transition: 0.3s ease;
+  }
+  
+  .menu li a:hover::after {
+    width: 100%;
+  }
+  
+  /* Gaya responsif untuk layar kecil:
+  Menyembunyikan menu secara default dan menampilkan menu saat tombol ditekan */
+  @media screen and (max-width: 768px) {
+    .navbar {
+      padding: 20px;
+    }
+  
+    .menu {
+      display: none;
+    }
+    .menu.aktif li a {
+      padding: 10px;
+    }
+
+  }  
+
+/* Mengatur tata letak dan gaya bagian hero dengan penataan teks di tengah */
 .hero {
     display: flex;
     justify-content: center;
@@ -32,8 +146,9 @@
     background-color: #f4f4f4;
 }
 
+/* Memberikan jarak kanan pada konten hero */
 .hero-content {
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
 
 .hero-content h2 {
@@ -46,6 +161,16 @@
     color: #666;
 }
 
+.extra-content {
+    display: none; /* Konten ini akan tersembunyi secara default */
+    color: rgb(3, 3, 3);
+}
+
+.extra-content.show {
+    display: block; /* Tampilkan saat kelas 'show' ditambahkan */
+}
+
+/* Gaya tombol di bagian hero dengan latar belakang hijau dan teks putih */
 .hero button {
     padding: 0.5rem 1rem;
     border: none;
@@ -54,6 +179,7 @@
     cursor: pointer;
 }
 
+/* Menentukan gaya bagian layanan dengan latar belakang hijau dan teks putih. */
 .layanan {
     background-color: #2e7d32;
     color: white;
@@ -66,6 +192,7 @@
     margin-bottom: 1rem;
 }
 
+/* Mengatur gaya tabel di bagian layanan dengan lebar penuh */
 .layanan table {
     width: 100%;
     border-collapse: collapse;
@@ -78,56 +205,43 @@
     text-align: center;
 }
 
-.produk {
-    padding: 2rem;
-    text-align: center;
+/* Gaya tombol umum dengan latar belakang hijau dan warna putih serta efek hover */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
-.produk h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+.button:hover {
+    background-color: #45a049; /* Warna saat hover */
 }
 
-.produk-list {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 1rem;
-}
-
-.produk-item {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    width: 200px;
-    text-align: center;
-}
-
-.produk-item img {
-    width: 100%;
-     border-radius: 10%;
-}
-
-.produk-item h4 {
-    margin: 0.5rem 0;
-    color: #333;
-}
-
-.produk-item p {
-    color: #666;
-}
-* {
-    font-family: "Roboto", sans-serif;;
-}
+/* Menetapkan margin dan padding untuk mengatur keseluruhan gaya halaman */
 body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
 }
 
+/* Mengatur gaya tabel dengan warna latar belakang abu-abu terang dan border-collapse */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f1ecec;
+}
+/* Mengatur header agar tetap di atas halaman */
 header {
+    position: fixed;
+    top: 0;
+    width: 100%;
     background-color: #333;
     color: #fff;
     padding: 10px 0;
-    text-align: center;
+    text-align: center
 }
 
 header h1 {
@@ -135,95 +249,118 @@ header h1 {
     font-size: 2.5em;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+/* Tambahkan margin pada body untuk menyesuaikan tinggi header */
+body {
+    margin-top: 80px; /* Sesuaikan dengan tinggi header agar konten tidak tertutup */
 }
 
-nav ul li {
-    display: inline;
-    margin:  15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: #f0c040;
-}
-
-main h2, main h3, footer p {
-    color: #333;
-    text-align: center;
-}
-
-section p{
-    font-size: 1.1em;
-    line-height: 1.6;
-    text-align: center;
-}
-
-section img {
-    display: block;
-    margin: 0 auto;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #f1ecec;
-}
-
-th, td {
+/* Mengatur padding, border, dan rata tengah untuk sel tabel */
+th,
+td {
     padding: 15px;
     border: 1px solid #ddd;
     text-align: center;
 }
 
+/* Memberikan warna latar belakang dan warna teks untuk header tabel. */
 th {
     background-color: #f0c040;
     color: #333;
 }
+
 td {
     color: #333;
 }
 
-/* .product-card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-} */
-.product-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 39px 23px 15px -3px rgba(0,0,0,0.1);
-    max-width: 250px;
-    margin: 10px;
-    padding: 30px;
+/* Mengatur padding dan rata tengah untuk bagian layanan */
+.service {
+    padding: 2rem;
     text-align: center;
 }
 
-.product-card img {
+.service h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+
+.produk-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Buat 3 kolom */
+    gap: 20px;
+    /* Jarak antar item */
+    max-width: 1200px;
+    /* Membatasi lebar maksimum agar lebih rapi di layar besar */
+    margin: 0 auto;
+    /* Mengatur posisi kontainer ke tengah */
+}
+
+/* Menambahkan bayangan hijau saat elemen .produk-item di-hover. */
+.produk-item:hover{
+    box-shadow: 0 4px 4px green;
+}
+
+/* Mengatur gaya item produk dengan bayangan, border, dan padding */
+.produk-item {
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Jika layar lebih kecil dari 768px, atur menjadi 2 kolom */
+@media (max-width: 768px) {
+    .produk-list {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 kolom untuk layar sedang */
+    }
+}
+
+/* Jika layar lebih kecil dari 480px, atur menjadi 1 kolom */
+@media (max-width: 480px) {
+    .produk-list {
+        grid-template-columns: 1fr;
+        /* 1 kolom untuk layar kecil */
+    }
+}
+
+/* Menyesuaikan lebar gambar agar memenuhi kontainer dengan border-radius 20% */
+.produk-item img {
     width: 100%;
-    border-radius: 10%;
+    border-radius: 20%;
 }
 
-.product-card h4 {
-    margin: 10px 0;
-    font-size: 1.3em;
+/* Memberikan margin dan warna teks untuk judul produk. */
+.produk-item h4 {
+    margin: 0.5rem 0;
+    color: #333;
 }
 
-.product-card p {
-    color: #777;
+/* Mengatur warna teks deskripsi produk */
+.produk-item p {
+    color: #666;
+}
+/* Menambahkan ukuran font dan jarak baris untuk paragraf di dalam section */
+section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: center;
 }
 
+/* Menempatkan gambar di tengah section */
+section img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Mengatur rata tengah untuk bagian kontak */
 .contact {
     text-align: center;
 }
 
+/* Mengatur footer dengan latar belakang gelap, teks putih, dan padding */
 footer {
     background-color: #252525;
     color: #fff;
@@ -231,57 +368,14 @@ footer {
     text-align: center;
 }
 
-footer p{
+/* Mengatur warna teks footer menjadi abu-abu terang. */
+footer p {
     color: #ddd;
 }
+
+/* Gaya untuk tautan di footer dengan warna kuning dan margin */
 footer a {
     color: #f0c040;
     text-decoration: none;
     margin: 0 10px;
-} 
-
-/* Gaya untuk navbar */
-.navbar {
-    background-color: #2e7d32;
-    color: white;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-}
-
-.menu-toggle {
-    display: none;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .navbar ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .navbar ul.show {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
 }

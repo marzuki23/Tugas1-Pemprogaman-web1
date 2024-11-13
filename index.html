@@ -10,34 +10,43 @@
 </head>
 
 <body>
+    <!-- Bagian header menyimpan logo dan navigasi utama -->
     <header>
-        <div id="home" class="navbar">
+        <div class="navbar">
             <h1>Kedai Murmer</h1>
-            <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
             <nav>
-                <ul id="nav-menu">
+                <ul class="menu">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <!-- Tombol menu mobile untuk membuka/tutup navigasi. -->
+                <div class="toggle-button" onclick="toggleMenu()">
+                    ☰ Menu
+                </div>
             </nav>
         </div>
     </header>
 
-    <section id="about" class="hero">
+    <section id="home" class="hero">
         <div class="hero-content">
             <h2>Selamat Datang di Kedai Murmer</h2>
-            <p>Kedai Murmer menyajikan berbagai hidangan lezat dan minuman segar yang dibuat dengan bahan-bahan pilihan.
-                Dengan suasana yang nyaman dan pelayanan yang ramah, kami berkomitmen untuk memberikan pengalaman kuliner
-                yang memuaskan bagi setiap pelanggan.</p>
-            <button>Selengkapnya</button>
+            <p>Kedai Murmer adalah sebuah kedai yang menyediakan berbagai hidangan khas Indonesia dan minuman segar dengan konsep harga murah meriah, sesuai dengan namanya. 
+                Menu yang ditawarkan meliputi aneka makanan ringan seperti gorengan, snack, serta minuman seperti es teh manis, kopi, dan lainnya.</p>
+            
+            <!-- Div ini akan tersembunyi pada awalnya -->
+            <div class="extra-content" style="display: none;">
+                <p>Kedai ini juga mengedepankan pelayanan cepat dan ramah sehingga pelanggan bisa merasa puas menikmati hidangan dengan suasana yang hangat.</p>
+            </div>
+            <!-- Tautan yang mengaktifkan/menyembunyikan konten tambahan. -->
+            <a href="#" id="show-more" class="button">Selengkapnya</a>
         </div>
         <div class="hero-image">
             <img src="gambar/kedai.png" width="200" height="190">
         </div>
     </section>
 
-    <section class="layanan">
+    <section id="about" class="layanan">
         <h3>LAYANAN KAMI</h3>
         <p>Di Kedai Murmer, kami punya layanan lengkap untuk memudahkan Anda menikmati setiap sajian! Mau dine-in, takeaway, atau delivery, kami siap melayani Anda dengan cepat dan ramah.</p>
         <table>
@@ -54,9 +63,11 @@
         </table>
     </section>
 
-    <section class="produk">
+    <!-- Product/Service Section -->
+    <section class="service">
         <h3>PRODUK KAMI</h3>
         <p>Setiap menu kami diracik dengan bahan berkualitas untuk memberikan pengalaman makan dan minum yang memuaskan. Rasakan sensasi kelezatan tanpa harus merogoh kocek dalam!</p>
+        <!-- Kontainer yang menggunakan Flexbox untuk daftar produk. -->
         <div class="produk-list">
             <div class="produk-item">
                 <img src="gambar/sempolang.jpg" alt="Product 1" width="200" height="190" >
@@ -90,6 +101,8 @@
             </div>
         </div>
     </section>
+
+    <!-- Contact Section -->
     <section id="contact" class="contact">
         <h3>Kontak Kami</h3>
         <form class="contact-form">
@@ -106,12 +119,32 @@
         </form>
     </section>
 
+    <!-- Bagian footer yang berisi informasi kontak. -->
     <footer class="footer">
         <p>Hubungi Kami:</p>
+        <!-- Link ikon untuk email, telepon, Instagram, dan peta. -->
         <p><a href="mailto:idrismarzuki1911@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a> <a href="https://wa.me/6281388949264"><i class="fa-solid fa-phone"></i> Telepon</a></p>
         <p><a href="https://www.instagram.com/kedai_murmer23"><i class="fa-brands fa-instagram"></i> Instagram</a> <a href="https://maps.app.goo.gl/s9qyiy57L6j7Zgbc8"><i class="fa-solid fa-map"></i> Alamat</a></p>
     </footer>
     <script src="script.js"></script>
 </body>
+<script>
+    // Mengambil elemen "Selengkapnya" dan menambahkan event listener click.
+    document.getElementById("show-more").addEventListener("click", function(event) {
+        event.preventDefault(); // Mencegah link reload halaman
+
+        // Mengambil elemen extra-content
+        const extraContent = document.querySelector(".extra-content");
+
+        if (extraContent.style.display === "none" || extraContent.style.display === "") {
+            // menampilkan atau menyembunyikan .extra-content.
+            extraContent.style.display = "block";
+            this.textContent = "Lebih Sedikit"; // Mengubah teks tombol
+        } else {
+            extraContent.style.display = "none";
+            this.textContent = "Selengkapnya"; // Mengembalikan teks tombol
+        }
+    });
+</script>
 
 </html>
