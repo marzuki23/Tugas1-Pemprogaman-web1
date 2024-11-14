@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <!-- Bagian header menyimpan logo dan navigasi utama -->
+    
     <header>
         <div class="navbar">
             <h1>Kedai Murmer</h1>
@@ -20,7 +20,7 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <!-- Tombol menu mobile untuk membuka/tutup navigasi. -->
+                
                 <div class="toggle-button" onclick="toggleMenu()">
                     ☰ Menu
                 </div>
@@ -34,11 +34,9 @@
             <p>Kedai Murmer adalah sebuah kedai yang menyediakan berbagai hidangan khas Indonesia dan minuman segar dengan konsep harga murah meriah, sesuai dengan namanya. 
                 Menu yang ditawarkan meliputi aneka makanan ringan seperti gorengan, snack, serta minuman seperti es teh manis, kopi, dan lainnya.</p>
             
-            <!-- Div ini akan tersembunyi pada awalnya -->
             <div class="extra-content" style="display: none;">
                 <p>Kedai ini juga mengedepankan pelayanan cepat dan ramah sehingga pelanggan bisa merasa puas menikmati hidangan dengan suasana yang hangat.</p>
             </div>
-            <!-- Tautan yang mengaktifkan/menyembunyikan konten tambahan. -->
             <a href="#" id="show-more" class="button">Selengkapnya</a>
         </div>
         <div class="hero-image">
@@ -67,7 +65,6 @@
     <section class="service">
         <h3>PRODUK KAMI</h3>
         <p>Setiap menu kami diracik dengan bahan berkualitas untuk memberikan pengalaman makan dan minum yang memuaskan. Rasakan sensasi kelezatan tanpa harus merogoh kocek dalam!</p>
-        <!-- Kontainer yang menggunakan Flexbox untuk daftar produk. -->
         <div class="produk-list">
             <div class="produk-item">
                 <img src="gambar/sempolang.jpg" alt="Product 1" width="200" height="190" >
@@ -122,27 +119,23 @@
     <!-- Bagian footer yang berisi informasi kontak. -->
     <footer class="footer">
         <p>Hubungi Kami:</p>
-        <!-- Link ikon untuk email, telepon, Instagram, dan peta. -->
         <p><a href="mailto:idrismarzuki1911@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a> <a href="https://wa.me/6281388949264"><i class="fa-solid fa-phone"></i> Telepon</a></p>
         <p><a href="https://www.instagram.com/kedai_murmer23"><i class="fa-brands fa-instagram"></i> Instagram</a> <a href="https://maps.app.goo.gl/s9qyiy57L6j7Zgbc8"><i class="fa-solid fa-map"></i> Alamat</a></p>
     </footer>
     <script src="script.js"></script>
 </body>
 <script>
-    // Mengambil elemen "Selengkapnya" dan menambahkan event listener click.
     document.getElementById("show-more").addEventListener("click", function(event) {
-        event.preventDefault(); // Mencegah link reload halaman
+        event.preventDefault();
 
-        // Mengambil elemen extra-content
         const extraContent = document.querySelector(".extra-content");
 
         if (extraContent.style.display === "none" || extraContent.style.display === "") {
-            // menampilkan atau menyembunyikan .extra-content.
             extraContent.style.display = "block";
-            this.textContent = "Lebih Sedikit"; // Mengubah teks tombol
+            this.textContent = "Lebih Sedikit";
         } else {
             extraContent.style.display = "none";
-            this.textContent = "Selengkapnya"; // Mengembalikan teks tombol
+            this.textContent = "Selengkapnya";
         }
     });
 </script>

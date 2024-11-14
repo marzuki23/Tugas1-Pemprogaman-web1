@@ -1,14 +1,10 @@
-/* Untuk mengimpor font "Roboto" dari Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-/* Mengatur font global menjadi "Roboto" dengan cadangan sans-serif */
 * {
     font-family: "Roboto", sans-serif;
     ;
 }
 
-/* Mengatur tampilan navbar dengan latar belakang hijau, teks putih, padding, dan tata letak 
-fleksibel agar judul dan menu berada di posisi yang sesuai */
 .navbar {
     background-color: #2e7d32;
     color: white;
@@ -18,8 +14,6 @@ fleksibel agar judul dan menu berada di posisi yang sesuai */
     align-items: center;
 }
 
-/* Menyetel margin dan padding semua elemen ke nol serta menerapkan kotak box-sizing agar batas
-tidak mengganggu ukuran elemen */
 * {
     margin: 0;
     padding: 0;
@@ -36,29 +30,24 @@ tidak mengganggu ukuran elemen */
     align-items: center;
 }
 
-/* Mengatur ukuran font untuk judul di navbar */
 .navbar h1 {
     font-size: 1.5rem;
 }
 
-/* Menghilangkan penanda list dan membuat menu horizontal */
 .menu {
     list-style: none;
     display: flex;
 }
 
-/* Memberikan jarak antar-item di menu */
 .menu li {
     margin: 0 15px;
 }
 
-/* Mengatur warna dan menghilangkan garis bawah dari tautan di menu */
 .menu li a {
     color: white;
     text-decoration: none;
 }
 
-/* Toggle button hanya muncul di layar kecil */
 .toggle-button {
     display: none;
     font-size: 1.2rem;
@@ -66,10 +55,9 @@ tidak mengganggu ukuran elemen */
     color: white;
 }
 
-/* Responsive untuk layar kecil */
 @media (max-width: 768px) {
     .menu {
-        display: none; /* Sembunyikan menu secara default */
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 60px;
@@ -80,7 +68,7 @@ tidak mengganggu ukuran elemen */
     }
 
     .menu.active {
-        display: flex; /* Tampilkan menu saat tombol ditekan */
+        display: flex;
     }
 
     .menu li {
@@ -88,7 +76,7 @@ tidak mengganggu ukuran elemen */
     }
 
     .toggle-button {
-        display: block; /* Tampilkan tombol pada layar kecil */
+        display: block;
     }
 }
  
@@ -120,8 +108,6 @@ tidak mengganggu ukuran elemen */
     width: 100%;
   }
   
-  /* Gaya responsif untuk layar kecil:
-  Menyembunyikan menu secara default dan menampilkan menu saat tombol ditekan */
   @media screen and (max-width: 768px) {
     .navbar {
       padding: 20px;
@@ -136,7 +122,6 @@ tidak mengganggu ukuran elemen */
 
   }  
 
-/* Mengatur tata letak dan gaya bagian hero dengan penataan teks di tengah */
 .hero {
     display: flex;
     justify-content: center;
@@ -146,7 +131,6 @@ tidak mengganggu ukuran elemen */
     background-color: #f4f4f4;
 }
 
-/* Memberikan jarak kanan pada konten hero */
 .hero-content {
     margin-right: 1rem;
 }
@@ -162,15 +146,14 @@ tidak mengganggu ukuran elemen */
 }
 
 .extra-content {
-    display: none; /* Konten ini akan tersembunyi secara default */
+    display: none;
     color: rgb(3, 3, 3);
 }
 
 .extra-content.show {
-    display: block; /* Tampilkan saat kelas 'show' ditambahkan */
+    display: block;
 }
 
-/* Gaya tombol di bagian hero dengan latar belakang hijau dan teks putih */
 .hero button {
     padding: 0.5rem 1rem;
     border: none;
@@ -179,7 +162,6 @@ tidak mengganggu ukuran elemen */
     cursor: pointer;
 }
 
-/* Menentukan gaya bagian layanan dengan latar belakang hijau dan teks putih. */
 .layanan {
     background-color: #2e7d32;
     color: white;
@@ -192,7 +174,6 @@ tidak mengganggu ukuran elemen */
     margin-bottom: 1rem;
 }
 
-/* Mengatur gaya tabel di bagian layanan dengan lebar penuh */
 .layanan table {
     width: 100%;
     border-collapse: collapse;
@@ -205,7 +186,6 @@ tidak mengganggu ukuran elemen */
     text-align: center;
 }
 
-/* Gaya tombol umum dengan latar belakang hijau dan warna putih serta efek hover */
 .button {
     display: inline-block;
     padding: 10px 20px;
@@ -227,13 +207,11 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Mengatur gaya tabel dengan warna latar belakang abu-abu terang dan border-collapse */
 table {
     width: 100%;
     border-collapse: collapse;
     background-color: #f1ecec;
 }
-/* Mengatur header agar tetap di atas halaman */
 header {
     position: fixed;
     top: 0;
@@ -249,12 +227,10 @@ header h1 {
     font-size: 2.5em;
 }
 
-/* Tambahkan margin pada body untuk menyesuaikan tinggi header */
 body {
-    margin-top: 80px; /* Sesuaikan dengan tinggi header agar konten tidak tertutup */
+    margin-top: 80px;
 }
 
-/* Mengatur padding, border, dan rata tengah untuk sel tabel */
 th,
 td {
     padding: 15px;
@@ -262,7 +238,6 @@ td {
     text-align: center;
 }
 
-/* Memberikan warna latar belakang dan warna teks untuk header tabel. */
 th {
     background-color: #f0c040;
     color: #333;
@@ -272,7 +247,6 @@ td {
     color: #333;
 }
 
-/* Mengatur padding dan rata tengah untuk bagian layanan */
 .service {
     padding: 2rem;
     text-align: center;
@@ -287,21 +261,15 @@ td {
 .produk-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* Buat 3 kolom */
     gap: 20px;
-    /* Jarak antar item */
     max-width: 1200px;
-    /* Membatasi lebar maksimum agar lebih rapi di layar besar */
     margin: 0 auto;
-    /* Mengatur posisi kontainer ke tengah */
 }
 
-/* Menambahkan bayangan hijau saat elemen .produk-item di-hover. */
 .produk-item:hover{
     box-shadow: 0 4px 4px green;
 }
 
-/* Mengatur gaya item produk dengan bayangan, border, dan padding */
 .produk-item {
     text-align: center;
     padding: 10px;
@@ -310,57 +278,46 @@ td {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Jika layar lebih kecil dari 768px, atur menjadi 2 kolom */
 @media (max-width: 768px) {
     .produk-list {
         grid-template-columns: repeat(2, 1fr);
-        /* 2 kolom untuk layar sedang */
     }
 }
 
-/* Jika layar lebih kecil dari 480px, atur menjadi 1 kolom */
 @media (max-width: 480px) {
     .produk-list {
         grid-template-columns: 1fr;
-        /* 1 kolom untuk layar kecil */
     }
 }
 
-/* Menyesuaikan lebar gambar agar memenuhi kontainer dengan border-radius 20% */
 .produk-item img {
     width: 100%;
     border-radius: 20%;
 }
 
-/* Memberikan margin dan warna teks untuk judul produk. */
 .produk-item h4 {
     margin: 0.5rem 0;
     color: #333;
 }
 
-/* Mengatur warna teks deskripsi produk */
 .produk-item p {
     color: #666;
 }
-/* Menambahkan ukuran font dan jarak baris untuk paragraf di dalam section */
 section p {
     font-size: 1.1em;
     line-height: 1.6;
     text-align: center;
 }
 
-/* Menempatkan gambar di tengah section */
 section img {
     display: block;
     margin: 0 auto;
 }
 
-/* Mengatur rata tengah untuk bagian kontak */
 .contact {
     text-align: center;
 }
 
-/* Mengatur footer dengan latar belakang gelap, teks putih, dan padding */
 footer {
     background-color: #252525;
     color: #fff;
@@ -368,12 +325,10 @@ footer {
     text-align: center;
 }
 
-/* Mengatur warna teks footer menjadi abu-abu terang. */
 footer p {
     color: #ddd;
 }
 
-/* Gaya untuk tautan di footer dengan warna kuning dan margin */
 footer a {
     color: #f0c040;
     text-decoration: none;
